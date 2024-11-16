@@ -20,12 +20,17 @@ if uploaded_file is not None:
         
         if text_content.strip():
             # Get the response from the summarization function
-            response = summarize(text_content)
+
+            with st.spinner("Analyzing paper... this takes about a minute"):
+                response = summarize(text_content)
             
             # Extract the summarized text
             try:
                 summarized_text = (response.text)
-                st.write(summarized_text)
+
+                with st.expander:
+                    st.write(summarized_text)
+                    
             except (KeyError, IndexError, AttributeError) as e:
                 st.error(f"Unable to parse the summary response. Check the response format. Error: {e}")
         else:
