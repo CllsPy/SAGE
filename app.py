@@ -30,6 +30,6 @@ with st.form('Gemini Paper Summarizer'):
 
     sub_button = st.form_submit_button('Submit')
 
-if submit_button:
+if sub_button:
     rating = st.slider('Please rate this app',0,10,5)
             
