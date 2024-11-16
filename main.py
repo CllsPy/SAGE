@@ -24,4 +24,8 @@ def summrize(sample_pdf):
     
   return response
 
-  
+def main():
+    summrize(sample_pdf)
+    
+if __name__ == "__main__":
+    main()
