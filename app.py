@@ -19,14 +19,14 @@ with st.form('Gemini Paper Summarizer'):
                 pdf_reader = PyPDF2.PdfReader(uploaded_file)
                 text_content = ""
             
-        for page in pdf_reader.pages:
-                text_content += page.extract_text()
+            for page in pdf_reader.pages:
+                    text_content += page.extract_text()
             
-        if text_content.strip():
-            with col2:
-                    response = summarize(text_content)
-                    st.write("DONE!")
-                    summarized_text = (response.text)
-                    st.write(summarized_text)
-                        
-        
+            if text_content.strip():
+                with col2:
+                        response = summarize(text_content)
+                        st.write("DONE!")
+                        summarized_text = (response.text)
+                        st.write(summarized_text)
+                            
+            
