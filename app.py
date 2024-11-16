@@ -3,4 +3,5 @@ from main import summarize
 
 uploaded_file = st.file_uploader("Upload your research paper (PDF)", type="pdf")
 if uploaded_file is not None:
-  st.markdown((summarize(uploaded_file)))
+  pdfFile = genai.upload_file(path=pdf_file, name=name, resumable=True)
+  st.markdown((summarize(pdfFile)))
