@@ -7,6 +7,10 @@ import streamlit as st
 import PyPDF2
 from main import summarize
 
+import time
+import streamlit as st
+
+
 # Upload the PDF
 uploaded_file = st.file_uploader('', type='pdf')
 
@@ -22,7 +26,9 @@ if uploaded_file is not None:
             # Get the response from the summarization function
 
             with st.spinner("Analyzing paper... this takes about a minute"):
+                time.sleep(5)
                 response = summarize(text_content)
+                st.write("DONE!")
             
             try:
                     summarized_text = (response.text)
