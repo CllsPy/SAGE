@@ -22,8 +22,8 @@ with st.form('Gemini Paper Summarizer'):
         for page in pdf_reader.pages:
                 text_content += page.extract_text()
             
-            if text_content.strip():
-                with col2:
+        if text_content.strip():
+            with col2:
                     response = summarize(text_content)
                     st.write("DONE!")
                     summarized_text = (response.text)
