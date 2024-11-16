@@ -28,5 +28,6 @@ with st.form('Gemini Paper Summarizer'):
                             st.write("DONE!")
                             summarized_text = (response.text)
                             st.write(summarized_text)
-                                
+
+    sub_button = st.form_submit_button('Submit')
             
