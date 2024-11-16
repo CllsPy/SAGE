@@ -14,7 +14,7 @@ uploaded_file = st.file_uploader("Upload your research paper (PDF)", type="pdf")
 #     return text
 
 if uploaded_file is not None:
-    file = genai.get_file(uploaded_file)
+    file = google-generativeai.get_file(uploaded_file)
     summary = summarize(file) 
     file
     
