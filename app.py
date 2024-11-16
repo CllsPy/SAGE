@@ -25,8 +25,6 @@ if uploaded_file is not None:
                 response = summarize(text_content)
             
             try:
-                
-                with st.expander:
                     summarized_text = (response.text)
                     st.write(summarized_text)
                     
