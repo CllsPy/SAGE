@@ -15,7 +15,6 @@ else:
 
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
-sample_pdf = genai.upload_file('2402.07927v1.pdf')
 
 def summarize(file):
   response = model.generate_content([sum, file])
