@@ -24,11 +24,10 @@ if uploaded_file is not None:
             with st.spinner("Analyzing paper... this takes about a minute"):
                 response = summarize(text_content)
             
-            # Extract the summarized text
             try:
-                summarized_text = (response.text)
-
+                
                 with st.expander:
+                    summarized_text = (response.text)
                     st.write(summarized_text)
                     
             except (KeyError, IndexError, AttributeError) as e:
