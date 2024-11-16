@@ -23,11 +23,12 @@ with st.form('Gemini Paper Summarizer'):
                         text_content += page.extract_text()
                 
                 if text_content.strip():
-                    with col2:
                             response = summarize(text_content)
                             st.write("DONE!")
                             summarized_text = (response.text)
-                            st.write(summarized_text)
+                    
+    with col2:
+        st.write(summarized_text)
 
     sub_button = st.form_submit_button('Submit')
             
