@@ -17,13 +17,12 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 sample_pdf = genai.upload_file('2402.07927v1.pdf')
 
-def summarize(sample_pdf):
-  response = model.generate_content(["Sumarize este pdf, responda em português-brasil", sample_pdf])
-    
+def summarize(file):
+  response = model.generate_content(["Sumarize este pdf, responda em português-brasil", file])
   return response
 
 def main():
-    summrize(sample_pdf)
+    summrize(file)
     
 if __name__ == "__main__":
     main()
