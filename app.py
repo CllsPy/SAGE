@@ -9,6 +9,7 @@ import time
 import streamlit as st
 
 with st.form('Gemini Paper Summarizer'):
+    st.header("Gemini Summarizer")
     uploaded_file = st.file_uploader('', type='pdf')
     if uploaded_file is not None:
         try:
