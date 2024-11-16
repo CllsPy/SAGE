@@ -18,16 +18,12 @@ if uploaded_file is not None:
             # Get the response from the summarization function
             response = summarize(text_content)
             
-            # Debug: Print the full response structure
-            st.write("Debug Response:", response)
-
-            # Attempt to extract the text
+            # Extract the summarized text
             try:
-                # Update this path based on the response structure
                 text_summary = response.result["candidates"][0]["content"]["parts"][0]["text"]
                 st.write(text_summary)
-            except Exception as e:
-                st.error(f"Unable to parse the summary response. Error: {e}")
+            except (KeyError, IndexError, AttributeError) as e:
+                st.error(f"Unable to parse the summary response. Check the response format. Error: {e}")
         else:
             st.warning("The PDF does not contain readable text.")
     except Exception as e:
