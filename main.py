@@ -1,5 +1,5 @@
 import google.generativeai as genai
-
+from prompt import sum
 import os
 from dotenv import load_dotenv
 
@@ -18,7 +18,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 sample_pdf = genai.upload_file('2402.07927v1.pdf')
 
 def summarize(file):
-  response = model.generate_content(["Sumarize este pdf, responda em português-brasil", file])
+  response = model.generate_content([sum, file])
   return response
 
 def main():
