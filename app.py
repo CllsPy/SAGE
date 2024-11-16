@@ -25,7 +25,7 @@ if uploaded_file is not None:
         if text_content.strip():
             # Get the response from the summarization function
 
-            with st.spinner("Analyzing paper... this takes about a minute"):
+            with st.spinner("Wait..."):
                 time.sleep(5)
                 response = summarize(text_content)
                 st.write("DONE!")
