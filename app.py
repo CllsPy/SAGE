@@ -3,9 +3,6 @@ import PyPDF2
 from main import summarize
 import google.generativeai as genai
 
-# Upload the PDF
-uploaded_file = st.file_uploader('')
-
 import streamlit as st
 import PyPDF2
 from main import summarize
