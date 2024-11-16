@@ -2,25 +2,19 @@ import streamlit as st
 import PyPDF2
 from main import summarize
 import google.generativeai as genai
-
 import streamlit as st
 import PyPDF2
 from main import summarize
-
 import time
 import streamlit as st
 
-
-# Upload the PDF
-uploaded_file = st.file_uploader('', type='pdf')
-
-
 with st.form('Gemini Paper Summarizer'):
+    uploaded_file = st.file_uploader('', type='pdf')
     if uploaded_file is not None:
         try:
-            # Read PDF content
             pdf_reader = PyPDF2.PdfReader(uploaded_file)
             text_content = ""
+            
             for page in pdf_reader.pages:
                 text_content += page.extract_text()
             
