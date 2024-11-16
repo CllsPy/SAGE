@@ -21,4 +21,4 @@ if uploaded_file is not None:
     summary = summarize(pdf_text)  # Assuming summarize now expects text
 
     # Display the summary
-    st.markdown(summary)
+    st.markdown(summary["candidates"][0]["content"]["parts"][0]["text"])
