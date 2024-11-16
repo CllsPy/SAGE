@@ -20,8 +20,7 @@ if uploaded_file is not None:
             
             # Extract the summarized text
             try:
-                text_summary = response.result["candidates"][0]["content"]["parts"][0]["text"]
-                st.write(text_summary)
+                response
             except (KeyError, IndexError, AttributeError) as e:
                 st.error(f"Unable to parse the summary response. Check the response format. Error: {e}")
         else:
