@@ -18,19 +18,20 @@ with st.form('Gemini Paper Summarizer'):
         st.info('Please Upload a PDF first')
         st.stop()
 
-    with col1:
-        if uploaded_file is not None:
-                pdf_reader = PyPDF2.PdfReader(uploaded_file)
-                text_content = ""
-            
-                for page in pdf_reader.pages:
-                        text_content += page.extract_text()
+    if  uploaded_file: 
+        with col1:
+            if uploaded_file is not None:
+                    pdf_reader = PyPDF2.PdfReader(uploaded_file)
+                    text_content = ""
                 
-                if text_content.strip():
-                            response = summarize(text_content)
-                            summarized_text = (response.text)     
-                           
-    sub_button = st.form_submit_button('Submit')
+                    for page in pdf_reader.pages:
+                            text_content += page.extract_text()
+                    
+                    if text_content.strip():
+                                response = summarize(text_content)
+                                summarized_text = (response.text)     
+                               
+        sub_button = st.form_submit_button('Submit')
     
 if sub_button:
      st.write(summarized_text)
