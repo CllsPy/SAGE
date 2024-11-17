@@ -7,6 +7,17 @@ import PyPDF2
 from main import summarize
 import time
 import streamlit as st
+from PIL import Image
+
+icon = Image.open('')
+
+st.set_page_config(
+       page_title =  'Paper Summarizer',
+        page_icon=icon,
+        layout='centered',
+        initial_sidebar_state='expanded',
+)
+
 
 # sidebar
 with st.sidebar:
