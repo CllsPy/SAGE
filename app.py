@@ -11,9 +11,7 @@ import streamlit as st
 # sidebar
 with st.sidebar:
         st.title("Objective")
-        st.info('"
-                        This project uses Google Generative
-                        AI and prompt engineering to generate 
+        st.info('"This project uses Google Generative AI and prompt engineering to generate 
                         structured summaries of uploaded 
                         scientific articles, simplifying key insights for quick understanding.
                 '")
