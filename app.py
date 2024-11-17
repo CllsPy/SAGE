@@ -25,10 +25,9 @@ with st.form('Gemini Paper Summarizer'):
                 if text_content.strip():
                             response = summarize(text_content)
                             summarized_text = (response.text)     
-                            st.write(summarized_text)
-
-    sub_button = st.form_submit_button('Submit')
-
+                           
+sub_button = st.form_submit_button('Submit')
 if sub_button:
-    rating = st.slider('Please rate this app',0,10,5)
-            
+     st.write(summarized_text)
+
+
