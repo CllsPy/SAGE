@@ -9,7 +9,7 @@ import time
 import streamlit as st
 from PIL import Image
 
-icon = Image.open('')
+icon = Image.open('documents.png')
 
 st.set_page_config(
        page_title =  'Paper Summarizer',
