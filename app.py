@@ -13,10 +13,12 @@ col1, col2 = st.columns(2)
 with st.form('Gemini Paper Summarizer'):
     st.header("Gemini Summarizer")
     uploaded_file = st.file_uploader('', type='pdf')
-
+    sub_button = st.form_submit_button('Submit')
+    
     if not uploaded_file:
         st.info('Please Upload a PDF first')
         st.stop()
+
 
     if  uploaded_file: 
         with col1:
@@ -31,7 +33,7 @@ with st.form('Gemini Paper Summarizer'):
                                 response = summarize(text_content)
                                 summarized_text = (response.text)     
                                
-            sub_button = st.form_submit_button('Submit')
+
     
 if sub_button:
      st.write(summarized_text)
