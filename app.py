@@ -33,6 +33,6 @@ with st.form('Gemini Paper Summarizer'):
                                 summarized_text = (response.text)     
                                
 if sub_button:
-     st.info(summarized_text, icon='i')
+     st.info(summarized_text)
 
 
