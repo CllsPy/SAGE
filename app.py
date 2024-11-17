@@ -8,11 +8,15 @@ from main import summarize
 import time
 import streamlit as st
 
+col1, col2 = st.columns(2)
+
 with st.form('Gemini Paper Summarizer'):
     st.header("Gemini Summarizer")
     uploaded_file = st.file_uploader('', type='pdf')
 
-    col1, col2 = st.columns(2)
+    if not uploaded_file:
+        st.info('Please Upload a PDF first')
+        st.stop()
 
     with col1:
         if uploaded_file is not None:
