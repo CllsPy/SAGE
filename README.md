@@ -4,7 +4,7 @@
 
 This project provides a streamlined method for summarizing scientific articles using advanced natural language processing capabilities. By leveraging Google Generative AI and fine-tuned prompt engineering, the application generates structured summaries of uploaded scientific articles.
 
----
+
 
 ## Features
 
@@ -13,7 +13,7 @@ This project provides a streamlined method for summarizing scientific articles u
 - **User-Friendly Input:** Users can upload files for seamless summarization.
 - **Powered by Generative AI:** Utilizes Google's Gemini AI model for content generation.
 
----
+
 
 ## Installation
 
@@ -28,7 +28,7 @@ Install the required libraries using:
 pip install streamlit python-dotenv google-generativeai PyPDF2
 ```
 
----
+
 
 ## Usage
 
@@ -50,7 +50,6 @@ pip install streamlit python-dotenv google-generativeai PyPDF2
 1. Upload a scientific article file (PDF or text format).
 2. The program will process the file and generate a structured summary.
 
----
 
 ## Example Prompt
 
@@ -82,12 +81,12 @@ The `.env` file is used to securely load the API key.
 - `summarize(file)`: Generates the summary using the Google Generative AI model.
 - `main()`: Entry point of the application.
 
----
+
 
 ## Contributing
 Contributions are welcome. Please fork the repository and submit a pull request.
 
----
+
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
