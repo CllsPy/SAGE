@@ -8,6 +8,13 @@ from main import summarize
 import time
 import streamlit as st
 
+# sidebar
+with st.sidebar:
+        st.title("Objective")
+
+        st.markdown("---")
+        st.markdown(f' made by [CLL](https://github.com/CllsPy)')
+    
 col1, col2 = st.columns(2)
 
 with st.form('Gemini Paper Summarizer'):
