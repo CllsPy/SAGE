@@ -5,15 +5,12 @@
 This project provides a streamlined method for summarizing scientific articles using advanced natural language processing capabilities. By leveraging Google Generative AI and fine-tuned prompt engineering, the application generates structured summaries of uploaded scientific articles.
 
 
-
 ## Features
 
 - **Automatic Summarization:** Converts uploaded articles into structured summaries.
 - **Detailed Outputs:** Includes key findings, objectives, methods, results, conclusions, and key concepts.
 - **User-Friendly Input:** Users can upload files for seamless summarization.
 - **Powered by Generative AI:** Utilizes Google's Gemini AI model for content generation.
-
-
 
 ## Installation
 
@@ -70,7 +67,6 @@ The summarization prompt used in the application ensures a consistent structure:
 # Key Concepts
 ```
 
----
 
 ## Code Explanation
 
