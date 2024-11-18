@@ -57,4 +57,4 @@ with st.form('Gemini Paper Summarizer'):
                                
 if sub_button:
        with st.expander('Show Anser"):
-              #st.info(summarized_text)
+              st.info(summarized_text)
