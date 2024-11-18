@@ -2,6 +2,6 @@
 base="dark"
 primaryColor="#f8f9fa"
 backgroundColor="#ccd5ae"
-textColor="#344e41"
+textColor="#dad7cd"
 secondaryBackgroundColor="#ccd5ae"
-font="monospace"
+font="sans serif"
