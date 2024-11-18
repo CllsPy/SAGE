@@ -56,7 +56,7 @@ with st.form('Gemini Paper Summarizer'):
                                 summarized_text = (response.text)     
                                
 if sub_button:
-       with st.expander:
+       with st.expander('Show Anser"):
             st.info(summarized_text)
 
 
