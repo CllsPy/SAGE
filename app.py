@@ -15,7 +15,7 @@ st.set_page_config(
        page_title =  'Paper Summarizer',
         page_icon=icon,
         layout='centered',
-        initial_sidebar_state='expanded',
+        initial_sidebar_state='auto',
 )
 
 
