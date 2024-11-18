@@ -57,11 +57,4 @@ with st.form('Gemini Paper Summarizer'):
                                
 if sub_button:
        with st.expander('Show Anser"):
-              st.info(summarized_text)
-
-with st.expander("See explanation"):
-    st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    ''')
+              #st.info(summarized_text)
