@@ -22,7 +22,7 @@ st.set_page_config(
 # sidebar
 with st.sidebar:
         st.title("Objective")
-        st.info(
+        st.write(
                 """This project uses Google Generative AI and prompt engineering to generate 
                         structured summaries of uploaded 
                         scientific articles, simplifying key insights for quick understanding.
