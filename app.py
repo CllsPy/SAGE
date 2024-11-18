@@ -34,12 +34,11 @@ with st.sidebar:
 col1, col2 = st.columns(2)
 
 with st.form('Gemini Paper Summarizer'):
-    st.header("Gemini Summarizer")
     uploaded_file = st.file_uploader('', type='pdf')
     sub_button = st.form_submit_button('Submit')
     
     if not uploaded_file:
-        st.info(f'Please **Upload** a PDF file')
+        st.info(f'Por favor **ANEXE** um PDF')
         st.stop()
 
     if  uploaded_file: 
