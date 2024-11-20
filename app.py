@@ -38,7 +38,7 @@ with st.form('Gemini Paper Summarizer'):
     sub_button = st.form_submit_button('Submit')
     
     if not uploaded_file:
-        st.info(f'Por favor **ANEXE** um PDF')
+        st.write(f'Por favor **ANEXE** um PDF')
         st.stop()
 
     if  uploaded_file: 
@@ -56,4 +56,4 @@ with st.form('Gemini Paper Summarizer'):
                                
 if sub_button:
        with st.expander('Mostrar Resposta'):
-              st.info(summarized_text)
+              st.markdown(summarized_text)
