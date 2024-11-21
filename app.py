@@ -79,6 +79,6 @@ with st.form('Gemini Paper Summarizer'):
                                 summarized_text = (response.text)     
                            
 if sub_button:
-        sum_paper()   
-       with st.expander('Mostrar Resposta'):
-              st.markdown(summarized_text)
+    sum_paper()   
+    with st.expander('Mostrar Resposta'):
+        st.markdown(summarized_text)
