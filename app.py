@@ -11,14 +11,14 @@ from PIL import Image
 
 def sum_paper():
     msg = st.toast('Estudando o  artigo...')
-    time.sleep(1)
+    time.sleep(5)
     msg.toast('Refletindo profundamente...')
-    time.sleep(1)
+    time.sleep(5)
     msg.toast('PRONTO!', icon = "🥞")
 
 def up_paper():
     msg = st.toast('Preparando o ambiente...')
-    time.sleep(5)
+    time.sleep(10)
     msg.toast('Quase lá...')
     time.sleep(10)
     msg.toast('PRONTO!', icon = "🥞")
