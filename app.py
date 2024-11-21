@@ -20,7 +20,7 @@ def up_paper():
     msg = st.toast('Preparando o ambiente...')
     time.sleep(1)
     msg.toast('Quase lá...')
-    time.sleep(1)
+    time.sleep(10)
     msg.toast('PRONTO!', icon = "🥞")
 
 icon = Image.open('documents.png')
@@ -64,7 +64,7 @@ with st.form('Gemini Paper Summarizer'):
 
     
     if  uploaded_file: 
-        sum_paper() 
+        up_paper() 
         with col1:
             if uploaded_file is not None:
                     pdf_reader = PyPDF2.PdfReader(uploaded_file)
