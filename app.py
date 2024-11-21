@@ -56,6 +56,7 @@ with st.form('Gemini Paper Summarizer'):
         st.stop()
 
     if  uploaded_file: 
+        sum_paper()
         with col1:
             if uploaded_file is not None:
                     pdf_reader = PyPDF2.PdfReader(uploaded_file)
@@ -65,7 +66,7 @@ with st.form('Gemini Paper Summarizer'):
                             text_content += page.extract_text()
                     
                     if text_content.strip():
-                           
+                               
                                 response = summarize(text_content)
                                 summarized_text = (response.text)     
                                
