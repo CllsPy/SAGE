@@ -11,9 +11,9 @@ from PIL import Image
 
 def sum_paper():
     msg = st.toast('Estudando o  artigo...')
-    time.sleep(5)
+    time.sleep(1)
     msg.toast('Refletindo profundamente...')
-    time.sleep(5)
+    time.sleep(1)
     msg.toast('PRONTO!', icon = "🥞")
 
 icon = Image.open('documents.png')
@@ -61,8 +61,7 @@ with st.form('Gemini Paper Summarizer'):
             if uploaded_file is not None:
                     pdf_reader = PyPDF2.PdfReader(uploaded_file)
                     text_content = ""
-                    
-                    sum_paper()
+                
                     for page in pdf_reader.pages:
                             text_content += page.extract_text()
                     
@@ -70,8 +69,7 @@ with st.form('Gemini Paper Summarizer'):
                                
                                 response = summarize(text_content)
                                 summarized_text = (response.text)     
-                               
+sum_paper()                              
 if sub_button:
        with st.expander('Mostrar Resposta'):
-              sum_paper()
               st.markdown(summarized_text)
