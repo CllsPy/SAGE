@@ -9,6 +9,13 @@ import time
 import streamlit as st
 from PIL import Image
 
+def sum_paper():
+    msg = st.toast('Estudando o  artigo...')
+    time.sleep(1)
+    msg.toast('Refletindo profundamente...')
+    time.sleep(1)
+    msg.toast('PRONTO!', icon = "🥞")
+
 icon = Image.open('documents.png')
 
 st.set_page_config(
@@ -58,9 +65,11 @@ with st.form('Gemini Paper Summarizer'):
                             text_content += page.extract_text()
                     
                     if text_content.strip():
+                           
                                 response = summarize(text_content)
                                 summarized_text = (response.text)     
                                
 if sub_button:
        with st.expander('Mostrar Resposta'):
+              sum_paper()
               st.markdown(summarized_text)
