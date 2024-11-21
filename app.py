@@ -55,7 +55,7 @@ with st.form('Gemini Paper Summarizer'):
             if uploaded_file is not None:
                 with st.spinner('CARREGANDO...'): 
                        st.toast('Estudando Artigo...', icon='😍')
-                       time.sleep(5)
+                       time.sleep(15)
                        pdf_reader = PyPDF2.PdfReader(uploaded_file)
                        text_content = ""
                        
