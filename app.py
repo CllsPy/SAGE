@@ -21,9 +21,20 @@ st.set_page_config(
 
 # sidebar
 with st.sidebar:
-       st.title("Objective")
+       st.header("Objective")
        st.write(""" Este projeto utiliza a Inteligência Artificial Generativa   do Google e engenharia de prompts para gerar resumos estruturados  
-       de artigos científicos carregados, simplificando os principais insights para um entendimento rápido""")
+       de artigos científicos carregados, simplificando os principais insights para um entendimento rápido.""")
+       st.markdown("---")
+
+       st.header("Utilização")
+       st.write("""
+       1. Faça UPLOAD de um artigo em formato PDF.
+       2. CLIQUE em sumarizar.
+       3. AGUARDE a sua resposta.
+       
+       """)
+       
+
        st.markdown("---")
        st.markdown(f' made by [CLL](https://github.com/CllsPy)')
     
