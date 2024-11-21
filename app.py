@@ -21,8 +21,10 @@ st.set_page_config(
 
 # sidebar
 with st.sidebar:
-        st.title("Objective")
-       st.write(""" Este projeto utiliza a Inteligência Artificial Generativa  do Google e engenharia de prompts para gerar resumos estruturados  de artigos científicos carregados, simplificando os principais insights para um entendimento rápido.""")
+       st.title("Objective")
+       st.write(""" Este projeto utiliza a Inteligência Artificial Generativa  
+       do Google e engenharia de prompts para gerar resumos estruturados  
+       de artigos científicos carregados, simplificando os principais insights para um entendimento rápido""")
 
                 
         st.markdown("---")
