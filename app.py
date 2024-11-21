@@ -68,4 +68,6 @@ with st.form('Gemini Paper Summarizer'):
                            
 if sub_button:
     with st.expander('Mostrar Resposta'):
-        st.markdown(summarized_text)
+           st.toast('Estudo Finalizado!', icon='😍')
+           time.sleep(15)
+           st.markdown(summarized_text)
