@@ -60,11 +60,10 @@ with st.form('Gemini Paper Summarizer'):
                        
                        for page in pdf_reader.pages:
                                 text_content += page.extract_text()
-                        
-                        if text_content.strip():
-                                   
-                                    response = summarize(text_content)
-                                    summarized_text = (response.text)     
+                       
+                       if text_content.strip():
+                              response = summarize(text_content)
+                              summarized_text = (response.text)     
                            
 if sub_button:
     sum_paper()   
