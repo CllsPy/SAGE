@@ -1,11 +1,5 @@
 # README
 
-## To-do
-
-- [ ] translate text - ptbr
-- [ ] add copy button
-- [ ] add tutorial
-- [ ] add loading bar
 
 ## Project Overview
 
@@ -89,8 +83,13 @@ The `.env` file is used to securely load the API key.
 ## Contributing
 Contributions are welcome. Please fork the repository and submit a pull request.
 
-
-
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
+
+## To-do
+
+- [ ] translate text - ptbr
+- [ ] add copy button
+- [ ] add tutorial
+- [ ] add loading bar
