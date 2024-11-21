@@ -53,11 +53,12 @@ with st.form('Gemini Paper Summarizer'):
     if  uploaded_file: 
         with col1:
             if uploaded_file is not None:
-                with st.spinner('Wait for it...'): time.sleep(5)
-                        pdf_reader = PyPDF2.PdfReader(uploaded_file)
-                        text_content = ""
-                    
-                        for page in pdf_reader.pages:
+                with st.spinner('Wait for it...'): 
+                       time.sleep(5)
+                       pdf_reader = PyPDF2.PdfReader(uploaded_file)
+                       text_content = ""
+                       
+                       for page in pdf_reader.pages:
                                 text_content += page.extract_text()
                         
                         if text_content.strip():
