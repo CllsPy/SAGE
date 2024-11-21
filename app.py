@@ -9,19 +9,6 @@ import time
 import streamlit as st
 from PIL import Image
 
-def sum_paper():
-    msg = st.toast('Estudando o  artigo...')
-    time.sleep(5)
-    msg.toast('Refletindo profundamente...')
-    time.sleep(5)
-    msg.toast('PRONTO!', icon = "🥞")
-
-def up_paper():
-    msg = st.toast('Preparando o ambiente...')
-    time.sleep(10)
-    msg.toast('Quase lá...')
-    time.sleep(10)
-    msg.toast('PRONTO!', icon = "🥞")
 
 icon = Image.open('documents.png')
 
@@ -64,19 +51,19 @@ with st.form('Gemini Paper Summarizer'):
 
     
     if  uploaded_file: 
-        up_paper() 
         with col1:
             if uploaded_file is not None:
-                    pdf_reader = PyPDF2.PdfReader(uploaded_file)
-                    text_content = ""
-                
-                    for page in pdf_reader.pages:
-                            text_content += page.extract_text()
+                with st.spinner('Wait for it...'): time.sleep(5)
+                        pdf_reader = PyPDF2.PdfReader(uploaded_file)
+                        text_content = ""
                     
-                    if text_content.strip():
-                               
-                                response = summarize(text_content)
-                                summarized_text = (response.text)     
+                        for page in pdf_reader.pages:
+                                text_content += page.extract_text()
+                        
+                        if text_content.strip():
+                                   
+                                    response = summarize(text_content)
+                                    summarized_text = (response.text)     
                            
 if sub_button:
     sum_paper()   
