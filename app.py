@@ -54,6 +54,7 @@ with st.form('Gemini Paper Summarizer'):
         with col1:
             if uploaded_file is not None:
                 with st.spinner('CARREGANDO...'): 
+                       st.toast('Estudando Artigo...', icon='😍')
                        time.sleep(5)
                        pdf_reader = PyPDF2.PdfReader(uploaded_file)
                        text_content = ""
@@ -66,6 +67,5 @@ with st.form('Gemini Paper Summarizer'):
                               summarized_text = (response.text)     
                            
 if sub_button:
-    sum_paper()   
     with st.expander('Mostrar Resposta'):
         st.markdown(summarized_text)
