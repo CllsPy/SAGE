@@ -25,10 +25,8 @@ with st.sidebar:
        st.write(""" Este projeto utiliza a Inteligência Artificial Generativa  
        do Google e engenharia de prompts para gerar resumos estruturados  
        de artigos científicos carregados, simplificando os principais insights para um entendimento rápido""")
-
-                
-        st.markdown("---")
-        st.markdown(f' made by [CLL](https://github.com/CllsPy)')
+       st.markdown("---")
+       st.markdown(f' made by [CLL](https://github.com/CllsPy)')
     
 col1, col2 = st.columns(2)
 
