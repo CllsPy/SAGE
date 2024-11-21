@@ -22,11 +22,10 @@ st.set_page_config(
 # sidebar
 with st.sidebar:
         st.title("Objective")
-        st.write(
-                """This project uses Google Generative AI and prompt engineering to generate 
-                        structured summaries of uploaded 
-                        scientific articles, simplifying key insights for quick understanding.
-                """)
+       st.write("""Este projeto utiliza a Inteligência Artificial Generativa do Google e engenharia de prompts para gerar
+            resumos estruturados de artigos científicos carregados, simplificando os principais insights para um entendimento rápido.
+            """)
+
                 
         st.markdown("---")
         st.markdown(f' made by [CLL](https://github.com/CllsPy)')
