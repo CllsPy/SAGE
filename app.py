@@ -19,7 +19,7 @@ st.set_page_config(
         initial_sidebar_state='auto',
 )
 
-st.subheader(":blue[Bem-Vindo, ]")
+st.title(":blue[Bem-Vindo, ]")
 
 # sidebar
 with st.sidebar:
