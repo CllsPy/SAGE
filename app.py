@@ -8,9 +8,7 @@ from main import summarize
 import time
 import streamlit as st
 from PIL import Image
-import pyperclip
-
-
+from st_copy_to_clipboard import st_copy_to_clipboard
 
 icon = Image.open('documents.png')
 
@@ -71,7 +69,7 @@ with st.form('Gemini Paper Summarizer'):
 if sub_button:
     with st.expander('Mostrar Resposta'):
            response = summarized_text
-           st.code(response)
+           st_copy_to_clipboard(response)
            
 
            
