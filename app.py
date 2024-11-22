@@ -71,7 +71,7 @@ if sub_button:
            response = summarized_text
            st.markdown(response)
 
-           st.write(f'Copiar Texto: {st_copy_to_clipboard(response)}')
+           st.write('Copiar Texto: '),  st_copy_to_clipboard(response)
 
            
 
