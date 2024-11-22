@@ -71,11 +71,9 @@ with st.form('Gemini Paper Summarizer'):
 if sub_button:
     with st.expander('Mostrar Resposta'):
            response = summarized_text
-           st.markdown(response)
+           st.code(response)
            
-           if st.button('Copy'):
-                  pyperclip.copy(response)
-                  st.success('Text copied successfully!')
+
            
            
 
