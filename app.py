@@ -68,6 +68,6 @@ with st.form('Gemini Paper Summarizer'):
                            
 if sub_button:
     with st.expander('Mostrar Resposta'):
-           full_response = st.markdown(summarized_text)
-           full_response
+           st.markdown(summarized_text)
+           
 
