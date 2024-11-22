@@ -8,6 +8,8 @@ from main import summarize
 import time
 import streamlit as st
 from PIL import Image
+import pyperclip
+
 
 
 icon = Image.open('documents.png')
