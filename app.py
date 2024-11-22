@@ -70,7 +70,9 @@ if sub_button:
     with st.expander('Mostrar Resposta'):
            response = summarized_text
            st.markdown(response)
-           st_copy_to_clipboard(response)
+
+           if st_copy_to_clipboard(response):
+                  st.toast('Text Copiado!!')
            
 
            
