@@ -1,16 +1,16 @@
 import streamlit as st
 import PyPDF2
-from main import summarize
+from sumarizer.main import summarize
 import google.generativeai as genai
 import streamlit as st
 import PyPDF2
-from main import summarize
+from sumarizer.main import summarize
 import time
 import streamlit as st
 from PIL import Image
 from st_copy_to_clipboard import st_copy_to_clipboard
 
-icon = Image.open('documents.png')
+icon = Image.open('assets/img/documents.png')
 
 st.set_page_config(
        page_title =  'Paper Summarizer',
