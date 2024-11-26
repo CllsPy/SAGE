@@ -10,7 +10,7 @@ import streamlit as st
 from PIL import Image
 from st_copy_to_clipboard import st_copy_to_clipboard
 
-icon = Image.open('assets/img/documents.png')
+icon = Image.open('documents.png')
 
 st.set_page_config(
        page_title =  'Paper Summarizer',
