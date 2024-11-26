@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from prompt import sum
+from utils.prompt import sum
 import os
 from dotenv import load_dotenv
 
