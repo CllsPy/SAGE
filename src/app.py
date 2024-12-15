@@ -42,7 +42,7 @@ with st.sidebar:
 col1, col2 = st.columns(2)
 
 with st.form('Gemini Paper Summarizer'):
-    uploaded_file = st.file_uploader('', type='pdf')
+    uploaded_file = st.file_uploader('File', type='pdf')
     sub_button = st.form_submit_button('Sumarizar')
     
     if not uploaded_file:
