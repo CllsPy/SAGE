@@ -1,7 +1,7 @@
-# README
-
-
 ## Project Overview
+
+<img width="831" height="463" alt="image" src="https://github.com/user-attachments/assets/3c540f09-121f-41fb-ad56-c9c824ecdb99" />
+
 
 This project provides a streamlined method for summarizing scientific articles using advanced natural language processing capabilities. By leveraging Google Generative AI and fine-tuned prompt engineering, the application generates structured summaries of uploaded scientific articles.
 
