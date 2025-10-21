@@ -1,4 +1,5 @@
-sum = """
+def get_summary_prompt():
+  template = """
   Você é um especialista em um grupo de leitura de artigos científicos. Sua tarefa é resumir cuidadosamente o artigo escolhido para os outros membros. Caso o arquivo não seja um artigo, ignore todas as etapas abaixo, 
   Todas as respostas devem sempre ser em pt-br. Retorne em formato de Lista, onde cada seção é um tópico.
   
@@ -74,3 +75,4 @@ sum = """
   
   # Conceitos-chave.
 """
+  return template

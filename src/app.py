@@ -1,11 +1,11 @@
 import streamlit as st
 import PyPDF2
-from sumarizer.main import initialize_model, summarize
+from main import initialize_model, summarize
 import time
 from st_copy_to_clipboard import st_copy_to_clipboard
 import os
 
-# Configuração da página
+
 st.set_page_config(
     page_title='Paper Summarizer',
     layout='wide',
@@ -106,7 +106,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 def read_sample_pdf():
-    sample_path = os.path.join('assets', 'pdf/Rosenblatt1958.pdf')
+    sample_path = "assets\Rosenblatt1958.pdf"
     if os.path.exists(sample_path):
         with open(sample_path, 'rb') as file:
             pdf_reader = PyPDF2.PdfReader(file)
@@ -137,7 +137,7 @@ with main_container:
         # Seção de API
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown(
-            '<h3 style="color: #1A1F36; margin-bottom: 1rem;">⚙️ Configuração</h3>',
+            '<h3 style="color: #1A1F36; margin-bottom: 1rem;">Configuração</h3>',
             unsafe_allow_html=True
         )
         api_key = st.text_input(
@@ -155,7 +155,7 @@ with main_container:
         )
         
         use_sample = st.checkbox(
-            "💡 Usar artigo de exemplo (Rosenblatt, 1958)",
+            "Usar artigo de exemplo (Rosenblatt, 1958)",
             value=False
         )
         
@@ -169,7 +169,7 @@ with main_container:
             st.markdown('</div>', unsafe_allow_html=True)
         else:
             st.markdown(
-                '<div class="success-box">✨ Usando o artigo de exemplo: "The Perceptron: '
+                '<div class="success-box">Usando o artigo de exemplo: "The Perceptron: '
                 'A Probabilistic Model for Information Storage and Organization in The Brain"</div>',
                 unsafe_allow_html=True
             )
@@ -178,21 +178,21 @@ with main_container:
 
         # Botão de processamento
         st.markdown('<div class="section-spacing">', unsafe_allow_html=True)
-        if st.button("🚀 Gerar Resumo", use_container_width=True):
+        if st.button("Gerar Resumo", use_container_width=True):
             if not api_key:
-                st.error('🔑 Por favor, insira sua chave API do Google')
+                st.error('Por favor, insira sua chave API do Google')
                 st.stop()
             
             if not uploaded_file and not use_sample:
-                st.error('📁 Por favor, selecione um PDF ou use o exemplo')
+                st.error('Por favor, selecione um PDF ou use o exemplo')
                 st.stop()
 
             try:
-                with st.spinner('🔄 Analisando o documento...'):
+                with st.spinner('Analisando o documento...'):
                     if use_sample:
                         text_content = read_sample_pdf()
                         if text_content is None:
-                            st.error("❌ Arquivo de exemplo não encontrado")
+                            st.error("Arquivo de exemplo não encontrado")
                             st.stop()
                     else:
                         pdf_reader = PyPDF2.PdfReader(uploaded_file)
@@ -208,7 +208,7 @@ with main_container:
                         # Exibição do resultado
                         st.markdown('<div class="results-container">', unsafe_allow_html=True)
                         st.markdown(
-                            '<h3 style="color: #1A1F36; margin-bottom: 1rem;">📝 Resumo Gerado</h3>',
+                            '<h3 style="color: #1A1F36; margin-bottom: 1rem;">Resumo Gerado</h3>',
                             unsafe_allow_html=True
                         )
                         st.markdown(summarized_text)
@@ -217,11 +217,11 @@ with main_container:
                         col1, col2 = st.columns([5,1])
                         with col2:
                             st_copy_to_clipboard(summarized_text)
-                            st.caption("📋 Copiar")
+                            st.caption("Copiar")
                         st.markdown('</div>', unsafe_allow_html=True)
                         
             except Exception as e:
-                st.error(f"❌ Erro ao processar o documento: {str(e)}")
+                st.error(f"Erro ao processar o documento: {str(e)}")
                 st.stop()
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -229,7 +229,7 @@ with main_container:
 with st.sidebar:
     st.markdown('<div style="padding: 1rem;">', unsafe_allow_html=True)
     st.markdown(
-        '<h3 style="color: #1A1F36; margin-bottom: 1rem;">ℹ️ Sobre o Projeto</h3>',
+        '<h3 style="color: #1A1F36; margin-bottom: 1rem;">Sobre o Projeto</h3>',
         unsafe_allow_html=True
     )
     st.write("""
@@ -239,19 +239,19 @@ with st.sidebar:
     """)
     
     st.markdown(
-        '<h3 style="color: #1A1F36; margin: 1.5rem 0 1rem;">🎯 Como Usar</h3>',
+        '<h3 style="color: #1A1F36; margin: 1.5rem 0 1rem;"> Como Usar</h3>',
         unsafe_allow_html=True
     )
     st.markdown("""
-    1. 🔑 Insira sua chave API do Google
-    2. 📄 Escolha entre usar o artigo de exemplo ou fazer upload do seu PDF
-    3. 🚀 Clique em "Gerar Resumo"
-    4. 📋 Copie o resultado gerado
+    1. Insira sua chave API do Google
+    2. Escolha entre usar o artigo de exemplo ou fazer upload do seu PDF
+    3. Clique em "Gerar Resumo"
+    4. Copie o resultado gerado
     """)
     
     st.markdown("---")
     st.markdown(
-        '<h3 style="color: #1A1F36; margin: 1.5rem 0 1rem;">👨‍💻 Desenvolvido por</h3>',
+        '<h3 style="color: #1A1F36; margin: 1.5rem 0 1rem;"> Desenvolvido por</h3>',
         unsafe_allow_html=True
     )
     st.markdown("[CLL](https://github.com/CllsPy)")
