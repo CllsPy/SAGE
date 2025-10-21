@@ -150,7 +150,7 @@ with main_container:
         # Seção de upload
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown(
-            '<h3 style="color: #1A1F36; margin-bottom: 1rem;">📎 Selecione o Documento</h3>',
+            '<h3 style="color: #1A1F36; margin-bottom: 1rem;">Selecione o Documento</h3>',
             unsafe_allow_html=True
         )
         
